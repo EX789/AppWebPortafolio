@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <style>
+            body{
+                padding-top: 40px;
+            };
+        </style>
+    </head>
+    <body style="background: url('http://www.demo.amitjakhu.com/login-form/images/bg.png');">
+        <div class="container col-md-offset-3 col-sm-7 col-sm-offset-3 col-md-7" style="background: #f3f3f3; border: 1px solid #fff; border-radius: 5px;     box-shadow: 0 1px 3px rgba(0,0,0,0.5); -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);">
+            <br>
+            <form action="/AppWebPortafolio/regus" class="form-horizontal " method="post">
+                <div class="form-group">
+                    <label for="nombre" class="control-label col-md-2">Nombre:</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre:" required onblur="validarNombre()" name="nombre">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Apmat" class="control-label col-md-2">Apellido materno:</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="Apmat" placeholder="Apellido materno:" required onblur="validarAppMat()" name="appmaterno">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Appat" class="control-label col-md-2">Apellido paterno:</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="Appat" placeholder="Apellido paterno:" required onblur="validarAppPat()" name="apppaterno">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="rut" class="control-label col-md-2">Rut:</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="rut" placeholder="Rut:" required name="rut">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Direccion" class="control-label col-md-2">Direccion</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="Direccion" placeholder="Direccion" required name="direccion">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="telefono" class="control-label col-md-2">Telefono:</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="telefono" placeholder="Telefono:" required name="telefono">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Comuna" class="control-label col-md-2">Comuna:</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="Comuna" placeholder="Comuna:" required name="comuna">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Correo" class="control-label col-md-2">Correo:</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="Correo" placeholder="Correo:" required name="correo">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contr" class="control-label col-md-2">Contraseña:</label>
+                    <div class="col-md-3">
+                        <input type="password" class="form-control" id="contr" placeholder="Contraseña:" required name="contrasenia" onblur="validacion()">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="repcontr" class="control-label col-md-2">Repetir contraseña:</label>
+                    <div class="col-md-3">
+                        <input type="password" class="form-control" id="repcontr" placeholder="Repetir contraseña:" required onblur="validacion()">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-2 col-md-offset-2">
+                        <button class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+                            $("#Correo").blur(function () {
+                                var regexCorreo = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+                                var correo = document.getElementById('Correo');
+                                if (!$("#Correo").val().match(regexCorreo)) {
+                                    correo.setCustomValidity("El correo no tieene buen formato");
+                                } else {
+                                    correo.setCustomValidity("");
+                                       }
+                                   console.log(correo.validity);
+                            });
+
+                            function validarNombre() {
+                                var nombre = document.getElementById('nombre');
+                                if (!$("#nombre").val().match(/^[a-zA-Z]+(\s*[a-zA-Z]*)*[a-zA-Z]+$/)) {
+                                    nombre.setCustomValidity("Solo se aceptan caracteres");
+                                } else {
+                                    nombre.setCustomValidity("");
+                                }
+                                console.log(nombre.validity);
+                            }
+
+                            function validarAppMat() {
+                                var appm = document.getElementById('Apmat');
+                                if (!$("#Apmat").val().match(/^[a-zA-Z]+(\s*[a-zA-Z]*)*[a-zA-Z]+$/)) {
+                                    appm.setCustomValidity("Solo se aceptan caracteres");
+                                } else {
+                                    appm.setCustomValidity("");
+                                }
+                                console.log(appm.validity);
+                            }
+                            function validarAppPat() {
+                                var appp = document.getElementById('Appat');
+                                if (!$("#Appat").val().match(/^[a-zA-Z]+(\s*[a-zA-Z]*)*[a-zA-Z]+$/)) {
+                                    appp.setCustomValidity("Solo se aceptan caracteres");
+                                } else {
+                                    appp.setCustomValidity("");
+                                }
+                                console.log(appp.validity);
+                            }
+
+                            function validacion() {
+ 
+                                 var nombre1 = document.getElementById('contr');
+                                         var nombre2 = document.getElementById('repcontr');
+ 
+                                   		if (nombre1.value != nombre2.value) {
+ 
+                                         		nombre1.setCustomValidity("los nombres deben ser iguales");
+                                         		nombre2.setCustomValidity("los nombres deben ser iguales");
+     
+                                   		} else {
+ 
+                                         		nombre1.setCustomValidity("");
+                                         		nombre2.setCustomValidity("");
+                                   		}
+ 
+                                   		console.log(nombre1.validity);
+                                    	console.log(nombre2.validity);
+                              }
+        </script>
+    </body>
+</html>

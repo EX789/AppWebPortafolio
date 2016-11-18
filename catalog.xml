@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:53383/Service1.asmx?WSDL" uri="src/conf/xml-resources/web-service-references/Service1/wsdl/localhost_53383/Service1.asmx.wsdl"/>
+    <system systemId="http://localhost:56271/Service1.svc" uri="src/conf/xml-resources/web-service-references/Service1_1/wsdl/localhost_56271/Service1.svc.xml"/>
+    <system systemId="http://localhost:56271/Service1.svc?singleWsdl" uri="src/conf/xml-resources/web-service-references/Service1_1/wsdl/localhost_56271/Service1.svc.singlewsdl.wsdl"/>
+    <system systemId="http://localhost:52352/BackendSVC.svc?singleWsdl" uri="src/conf/xml-resources/web-service-references/BackendSVC/wsdl/localhost_52352/BackendSVC.svc.singlewsdl.wsdl"/>
+</catalog>
