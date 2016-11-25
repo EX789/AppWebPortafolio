@@ -485,6 +485,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link EnviarCorreo }
+     * 
+     */
+    public EnviarCorreo createEnviarCorreo() {
+        return new EnviarCorreo();
+    }
+
+    /**
+     * Create an instance of {@link EnviarCorreoResponse }
+     * 
+     */
+    public EnviarCorreoResponse createEnviarCorreoResponse() {
+        return new EnviarCorreoResponse();
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */

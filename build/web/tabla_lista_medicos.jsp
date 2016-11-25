@@ -42,7 +42,7 @@
                                     <td>${item.getNombre().getValue()}</td>
                                     <td>${item.getRut().getValue()}</td>
                                     <td>${item.getEspecialidad().getValue()}</td>
-                                    <td><a href="/AppWebPortafolio/buscar_agenda?nombre=${item.getNombre().getValue()}&id_medico=${item.getIdMedico()}&rut=${item.getRut().getValue()}&especialidad=${item.getEspecialidad().getValue()}" class="btn btn-primary">Buscar</a></td>
+                                    <td><a href="/trunk/buscar_agenda?nombre=${item.getNombre().getValue()}&id_medico=${item.getIdMedico()}&rut=${item.getRut().getValue()}&especialidad=${item.getEspecialidad().getValue()}" class="btn btn-primary">Buscar</a></td>
                                 </tr>
                             </c:forEach>
                         </c:if>

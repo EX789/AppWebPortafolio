@@ -19,7 +19,7 @@
             </c:when>
             <c:when test="${empty listMedico && empty listCentro}">
                 <script>
-                    window.location = "/AppWebPortafolio/cbmed";
+                    window.location = "/trunk/cbmed";
                 </script>
             </c:when>
         </c:choose>
@@ -57,7 +57,7 @@
         </div>
         <div class="container-fluid col-md-3 col-md-offset-5 col-sm-5 col-sm-offset-5 " style="margin-top: 100px; background-color: white; border-radius: 20px;
              ">
-            <form action="/AppWebPortafolio/formMedCen" class="form" method="post">
+            <form action="/trunk/formMedCen" class="form" method="post">
                 <div class="col-xs-12 col-sm-10">
                     <label for="Especialidad">Especialidad</label>
                     <select name="cbMedico" id="c" class="form-control">

@@ -77,7 +77,7 @@
                 var id = document.getElementById('id_input').value;
                 $.ajax({
                     type: 'POST',
-                    url: "/AppWebPortafolio/Obtener_lista_horas",
+                    url: "/trunk/Obtener_lista_horas",
                     data: {fecha: elemento, id_medico: id},
                     dataType: 'json',
                     cache: false,
@@ -88,7 +88,7 @@
                                         "<td>" + estado.Horas + "</td>" +
                                         "<td>" + estado.Minutos + "</td>" +
                                         "<td>" + estado.Descripcion + "</td>" +
-                                        "<td>" + '<a class="btn btn-primary" href="/AppWebPortafolio/Registrar_reserva?id_medico='+ estado.iid_agenda_medico +'">Reservar</a>' +"</td>"));
+                                        "<td>" + '<a class="btn btn-primary" href="/trunk/Registrar_reserva?id_medico='+ estado.iid_agenda_medico +'">Reservar</a>' +"</td>"));
                             } else {
                                 $(".table").append($("<tr>").append(
                                         "<td>" + estado.Horas + "</td>" +

@@ -15,7 +15,7 @@
     </head>
     <body>
         <div id="wrapper">
-            <form name="login-form" class="login-form" action="/AppWebPortafolio/Inicio_sesion" method="post">
+            <form name="login-form" class="login-form" action="/trunk/Inicio_sesion" method="post">
 
                 <div class="header">
                     <h1>Login Form</h1>

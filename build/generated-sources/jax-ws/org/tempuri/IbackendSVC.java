@@ -466,4 +466,12 @@ public interface IbackendSVC {
         @WebParam(name = "Lista", targetNamespace = "http://tempuri.org/")
         ArrayOfAgendaMedico lista);
 
+    /**
+     * 
+     */
+    @WebMethod(action = "http://tempuri.org/IbackendSVC/enviarCorreo")
+    @RequestWrapper(localName = "enviarCorreo", targetNamespace = "http://tempuri.org/", className = "org.tempuri.EnviarCorreo")
+    @ResponseWrapper(localName = "enviarCorreoResponse", targetNamespace = "http://tempuri.org/", className = "org.tempuri.EnviarCorreoResponse")
+    public void enviarCorreo();
+
 }
