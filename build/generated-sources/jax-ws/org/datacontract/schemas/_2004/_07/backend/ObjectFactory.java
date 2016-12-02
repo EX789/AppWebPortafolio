@@ -37,6 +37,15 @@ public class ObjectFactory {
     private final static QName _AgendaMedico_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "Agenda_medico");
     private final static QName _ArrayOfReserva_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "ArrayOfReserva");
     private final static QName _Reserva_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "Reserva");
+    private final static QName _ArrayOfRecaudacion_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "ArrayOfRecaudacion");
+    private final static QName _Recaudacion_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "Recaudacion");
+    private final static QName _ArrayOfPagoComision_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "ArrayOfPagoComision");
+    private final static QName _PagoComision_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "PagoComision");
+    private final static QName _PagoComisionEstado_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "estado");
+    private final static QName _PagoComisionNombre_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "nombre");
+    private final static QName _PagoComisionRut_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "rut");
+    private final static QName _RecaudacionApeMat_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "apeMat");
+    private final static QName _RecaudacionApePat_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "apePat");
     private final static QName _ReservaRutPersona_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "rut_persona");
     private final static QName _AgendaMedicoDescripcion_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "Descripcion");
     private final static QName _CentroMedicoComuna_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "comuna");
@@ -47,8 +56,6 @@ public class ObjectFactory {
     private final static QName _MedicoNombre_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "Nombre");
     private final static QName _MedicoRut_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "Rut");
     private final static QName _PacienteDescripcion_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "descripcion");
-    private final static QName _PacienteNombre_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "nombre");
-    private final static QName _PacienteRut_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "rut");
     private final static QName _PacienteNoPagoRutPaciente_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "Rut_paciente");
     private final static QName _PersonaApellidoM_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "ApellidoM");
     private final static QName _PersonaApellidoP_QNAME = new QName("http://schemas.datacontract.org/2004/07/Backend.Negocio", "ApellidoP");
@@ -123,6 +130,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ArrayOfRecaudacion }
+     * 
+     */
+    public ArrayOfRecaudacion createArrayOfRecaudacion() {
+        return new ArrayOfRecaudacion();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfPagoComision }
+     * 
+     */
+    public ArrayOfPagoComision createArrayOfPagoComision() {
+        return new ArrayOfPagoComision();
+    }
+
+    /**
      * Create an instance of {@link PacienteNoPago }
      * 
      */
@@ -168,6 +191,22 @@ public class ObjectFactory {
      */
     public Reserva createReserva() {
         return new Reserva();
+    }
+
+    /**
+     * Create an instance of {@link Recaudacion }
+     * 
+     */
+    public Recaudacion createRecaudacion() {
+        return new Recaudacion();
+    }
+
+    /**
+     * Create an instance of {@link PagoComision }
+     * 
+     */
+    public PagoComision createPagoComision() {
+        return new PagoComision();
     }
 
     /**
@@ -288,6 +327,105 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfRecaudacion }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Backend.Negocio", name = "ArrayOfRecaudacion")
+    public JAXBElement<ArrayOfRecaudacion> createArrayOfRecaudacion(ArrayOfRecaudacion value) {
+        return new JAXBElement<ArrayOfRecaudacion>(_ArrayOfRecaudacion_QNAME, ArrayOfRecaudacion.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Recaudacion }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Backend.Negocio", name = "Recaudacion")
+    public JAXBElement<Recaudacion> createRecaudacion(Recaudacion value) {
+        return new JAXBElement<Recaudacion>(_Recaudacion_QNAME, Recaudacion.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfPagoComision }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Backend.Negocio", name = "ArrayOfPagoComision")
+    public JAXBElement<ArrayOfPagoComision> createArrayOfPagoComision(ArrayOfPagoComision value) {
+        return new JAXBElement<ArrayOfPagoComision>(_ArrayOfPagoComision_QNAME, ArrayOfPagoComision.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PagoComision }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Backend.Negocio", name = "PagoComision")
+    public JAXBElement<PagoComision> createPagoComision(PagoComision value) {
+        return new JAXBElement<PagoComision>(_PagoComision_QNAME, PagoComision.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Backend.Negocio", name = "estado", scope = PagoComision.class)
+    public JAXBElement<String> createPagoComisionEstado(String value) {
+        return new JAXBElement<String>(_PagoComisionEstado_QNAME, String.class, PagoComision.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Backend.Negocio", name = "nombre", scope = PagoComision.class)
+    public JAXBElement<String> createPagoComisionNombre(String value) {
+        return new JAXBElement<String>(_PagoComisionNombre_QNAME, String.class, PagoComision.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Backend.Negocio", name = "rut", scope = PagoComision.class)
+    public JAXBElement<String> createPagoComisionRut(String value) {
+        return new JAXBElement<String>(_PagoComisionRut_QNAME, String.class, PagoComision.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Backend.Negocio", name = "apeMat", scope = Recaudacion.class)
+    public JAXBElement<String> createRecaudacionApeMat(String value) {
+        return new JAXBElement<String>(_RecaudacionApeMat_QNAME, String.class, Recaudacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Backend.Negocio", name = "apePat", scope = Recaudacion.class)
+    public JAXBElement<String> createRecaudacionApePat(String value) {
+        return new JAXBElement<String>(_RecaudacionApePat_QNAME, String.class, Recaudacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Backend.Negocio", name = "nombre", scope = Recaudacion.class)
+    public JAXBElement<String> createRecaudacionNombre(String value) {
+        return new JAXBElement<String>(_PagoComisionNombre_QNAME, String.class, Recaudacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Backend.Negocio", name = "rut", scope = Recaudacion.class)
+    public JAXBElement<String> createRecaudacionRut(String value) {
+        return new JAXBElement<String>(_PagoComisionRut_QNAME, String.class, Recaudacion.class, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
@@ -383,7 +521,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Backend.Negocio", name = "nombre", scope = Paciente.class)
     public JAXBElement<String> createPacienteNombre(String value) {
-        return new JAXBElement<String>(_PacienteNombre_QNAME, String.class, Paciente.class, value);
+        return new JAXBElement<String>(_PagoComisionNombre_QNAME, String.class, Paciente.class, value);
     }
 
     /**
@@ -392,7 +530,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Backend.Negocio", name = "rut", scope = Paciente.class)
     public JAXBElement<String> createPacienteRut(String value) {
-        return new JAXBElement<String>(_PacienteRut_QNAME, String.class, Paciente.class, value);
+        return new JAXBElement<String>(_PagoComisionRut_QNAME, String.class, Paciente.class, value);
     }
 
     /**

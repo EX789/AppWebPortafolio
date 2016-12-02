@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import org.datacontract.schemas._2004._07.backend.*;
 
 public final class anular_005fhora_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -12,7 +13,9 @@ public final class anular_005fhora_jsp extends org.apache.jasper.runtime.HttpJsp
   private static java.util.List<String> _jspx_dependants;
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_out_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_choose;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_otherwise;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_when_test;
 
@@ -24,14 +27,18 @@ public final class anular_005fhora_jsp extends org.apache.jasper.runtime.HttpJsp
 
   public void _jspInit() {
     _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_c_out_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_choose = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_otherwise = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_when_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_c_forEach_var_items.release();
+    _jspx_tagPool_c_out_value_nobody.release();
     _jspx_tagPool_c_choose.release();
+    _jspx_tagPool_c_if_test.release();
     _jspx_tagPool_c_otherwise.release();
     _jspx_tagPool_c_when_test.release();
   }
@@ -64,6 +71,7 @@ public final class anular_005fhora_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -91,7 +99,10 @@ public final class anular_005fhora_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("                                <span class=\"icon-bar\"></span>\n");
       out.write("                                <span class=\"icon-bar\"></span>\n");
       out.write("                            </button>\n");
-      out.write("                            <a href=\"#\" class=\"navbar-brand\">Bienvenido</a>\n");
+      out.write("                            <a href=\"#\" class=\"navbar-brand\">Bienvenido ");
+      if (_jspx_meth_c_out_0(_jspx_page_context))
+        return;
+      out.write("</a>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"collapse navbar-collapse\" id=\"navbar-1\">\n");
       out.write("                            <ul class=\"nav navbar-nav navbar-right\">\n");
@@ -107,24 +118,23 @@ public final class anular_005fhora_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("        <div class=\"container\">\n");
       out.write("            <h3 class=\"form-group\">Lista de medicos</h3>\n");
       out.write("            <div class=\"table-responsive\">\n");
-      out.write("                <form action=\"/AppWebPortafolio/BorrarReserva\" method=\"POST\">\n");
-      out.write("                    <table class=\"table table-bordered table-hover\" style=\"background-color: white\">\n");
-      out.write("                        <thead>\n");
-      out.write("                            <tr class=\"active\">\n");
-      out.write("                                <th>Rut</th>\n");
-      out.write("                                <th>Estado reserva</th>\n");
-      out.write("                                <th>Hora</th>\n");
-      out.write("                                <td>Accion</td>\n");
-      out.write("                            </tr>\n");
-      out.write("                        </thead>\n");
-      out.write("                        <tbody>\n");
-      out.write("                            ");
+      out.write("                <table class=\"table table-bordered table-hover\" style=\"background-color: white\">\n");
+      out.write("                    <thead>\n");
+      out.write("                        <tr class=\"active\">\n");
+      out.write("                            <th>Rut</th>\n");
+      out.write("                            <th>Estado reserva</th>\n");
+      out.write("                            <th>Hora</th>\n");
+      out.write("                            <th>Minuto</th>\n");
+      out.write("                            <td>Accion</td>\n");
+      out.write("                        </tr>\n");
+      out.write("                    </thead>\n");
+      out.write("                    <tbody>\n");
+      out.write("                        ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
       out.write("\n");
-      out.write("                        </tbody>\n");
-      out.write("                    </table>\n");
-      out.write("                </form>\n");
+      out.write("                    </tbody>\n");
+      out.write("                </table>\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("        <script src=\"js/jquery.js\"></script>\n");
@@ -222,7 +232,7 @@ public final class anular_005fhora_jsp extends org.apache.jasper.runtime.HttpJsp
       do {
         out.write("\n");
         out.write("                <script>\n");
-        out.write("                    windows.location = \"/AppWebPortafolio/listaReserva\";\n");
+        out.write("                    window.location = \"/trunk/listaReserva\";\n");
         out.write("                </script>\n");
         out.write("            ");
         int evalDoAfterBody = _jspx_th_c_when_1.doAfterBody();
@@ -238,6 +248,24 @@ public final class anular_005fhora_jsp extends org.apache.jasper.runtime.HttpJsp
     return false;
   }
 
+  private boolean _jspx_meth_c_out_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:out
+    org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_0 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
+    _jspx_th_c_out_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_out_0.setParent(null);
+    _jspx_th_c_out_0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.persona.getNombrePersona().getValue()}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_c_out_0 = _jspx_th_c_out_0.doStartTag();
+    if (_jspx_th_c_out_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_0);
+      return true;
+    }
+    _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_0);
+    return false;
+  }
+
   private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -246,7 +274,7 @@ public final class anular_005fhora_jsp extends org.apache.jasper.runtime.HttpJsp
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_0.setParent(null);
-    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${lista}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${listaReserva.getReserva()}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     _jspx_th_c_forEach_0.setVar("item");
     int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
     try {
@@ -254,21 +282,23 @@ public final class anular_005fhora_jsp extends org.apache.jasper.runtime.HttpJsp
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\n");
-          out.write("                                <tr>\n");
-          out.write("                                    <td><input type=\"text\" name=\"txtRut\" value=\"");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${item.rut_persona}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\" readonly=\"readonly\" /></td>\n");
-          out.write("                                    <td>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${item.estado_reserva}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("                            <tr>\n");
+          out.write("                                <td>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${item.getRutPersona().getValue()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</td>\n");
-          out.write("                                    ");
+          out.write("                                ");
+          if (_jspx_meth_c_if_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
+            return true;
+          out.write("\n");
+          out.write("                                ");
           if (_jspx_meth_c_choose_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("\n");
-          out.write("                            <input type=\"hidden\" name=\"hidden_id_medico\" value=\"");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${item.id_agen_med}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\" />\n");
-          out.write("                            <td><input type=\"submit\" value=\"Borrar\" name=\"btnBorrar\" /></td>\n");
+          out.write("                                <td><a href=\"/trunk/BorrarReserva?id_medico=");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${item.getIdAgenMed()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("&rut=");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${item.getRutPersona().getValue()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\" class=\"btn btn-primary\">Eliminar</a></td>\n");
           out.write("                            </tr>\n");
           out.write("                        ");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
@@ -290,6 +320,34 @@ public final class anular_005fhora_jsp extends org.apache.jasper.runtime.HttpJsp
     return false;
   }
 
+  private boolean _jspx_meth_c_if_0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
+    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${item.getEstadoReserva() == 1}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
+    if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\n");
+        out.write("                                    <td>Resevado</td>\n");
+        out.write("                                ");
+        int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_if_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
+    return false;
+  }
+
   private boolean _jspx_meth_c_choose_1(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -302,15 +360,15 @@ public final class anular_005fhora_jsp extends org.apache.jasper.runtime.HttpJsp
     if (_jspx_eval_c_choose_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\n");
-        out.write("                                        ");
+        out.write("                                    ");
         if (_jspx_meth_c_when_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_1, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
         out.write("\n");
-        out.write("                                        ");
+        out.write("                                    ");
         if (_jspx_meth_c_otherwise_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_1, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
           return true;
         out.write("\n");
-        out.write("                                    ");
+        out.write("                                ");
         int evalDoAfterBody = _jspx_th_c_choose_1.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
@@ -332,15 +390,18 @@ public final class anular_005fhora_jsp extends org.apache.jasper.runtime.HttpJsp
     org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_2 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
     _jspx_th_c_when_2.setPageContext(_jspx_page_context);
     _jspx_th_c_when_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_1);
-    _jspx_th_c_when_2.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${item.hora>=0 && item.hora<=9 || item.minuto>=0 && item.minuto<=9}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    _jspx_th_c_when_2.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${item.getHora()>=0 && item.getHora()<=9 || item.getMinuto()>=0 && item.getMinuto()<=9}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
     int _jspx_eval_c_when_2 = _jspx_th_c_when_2.doStartTag();
     if (_jspx_eval_c_when_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\n");
-        out.write("                                            <td>");
-        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${\"0\"+item.hora+\":\"+\"0\"+item.minuto}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("                                        <td>");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${\"0\"+item.getHora().toString()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("</td>\n");
-        out.write("                                        ");
+        out.write("                                        <td>");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${\"0\"+item.getMinuto().toString()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("</td>\n");
+        out.write("                                    ");
         int evalDoAfterBody = _jspx_th_c_when_2.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
@@ -366,10 +427,13 @@ public final class anular_005fhora_jsp extends org.apache.jasper.runtime.HttpJsp
     if (_jspx_eval_c_otherwise_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\n");
-        out.write("                                            <td>");
-        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${item.hora+\":\"+item.minuto}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("                                        <td>");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${item.getHora().toString()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("</td>\n");
-        out.write("                                        ");
+        out.write("                                        <td>");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${item.getMinuto().toString()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("</td>\n");
+        out.write("                                    ");
         int evalDoAfterBody = _jspx_th_c_otherwise_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;

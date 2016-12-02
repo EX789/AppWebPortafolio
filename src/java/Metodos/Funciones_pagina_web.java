@@ -78,6 +78,12 @@ public class Funciones_pagina_web {
         return port.crearReserva(estadoReserva, rut, idAgenda);
     }
 
+    public static void enviarCorreo(java.lang.String correo) {
+        org.tempuri.BackendSVC service = new org.tempuri.BackendSVC();
+        org.tempuri.IbackendSVC port = service.getBasicHttpBindingIbackendSVC();
+        port.enviarCorreo(correo);
+    }
+
     
     
     

@@ -18,7 +18,7 @@
             </c:when>
             <c:when test="${empty listaReserva}">
                 <script>
-                    window.location = "/AppWebPortafolio/listaReserva";
+                    window.location = "/trunk/listaReserva";
                 </script>
             </c:when>
         </c:choose>
@@ -42,7 +42,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a href="#" class="navbar-brand">Bienvenido</a>
+                            <a href="#" class="navbar-brand">Bienvenido <c:out value="${sessionScope.persona.getNombrePersona().getValue()}"/></a>
                         </div>
                         <div class="collapse navbar-collapse" id="navbar-1">
                             <ul class="nav navbar-nav navbar-right">
@@ -85,7 +85,7 @@
                                         <td>${item.getMinuto().toString()}</td>
                                     </c:otherwise>
                                 </c:choose>
-                                <td><a href="/AppWebPortafolio/BorrarReserva?id_medico=${item.getIdAgenMed()}&rut=${item.getRutPersona().getValue()}" class="btn btn-primary">Eliminar</a></td>
+                                <td><a href="/trunk/BorrarReserva?id_medico=${item.getIdAgenMed()}&rut=${item.getRutPersona().getValue()}" class="btn btn-primary">Eliminar</a></td>
                             </tr>
                         </c:forEach>
                     </tbody>

@@ -33,8 +33,10 @@ public class Registrar_reserva extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             Persona per = (Persona)request.getSession().getAttribute("persona");
+            String correo = per.getCorreo().getValue();
             int id_agenda = Integer.parseInt(request.getParameter("id_medico"));
             if (Metodos.Funciones_pagina_web.crearReserva(1, per.getRutPersona().getValue(), id_agenda)) {
+                Metodos.Funciones_pagina_web.enviarCorreo(correo);
                 request.getRequestDispatcher("confirmacion_reserva.html").forward(request, response);
             }else{
                 request.setAttribute("mensaje", "Error al agregar");
